@@ -1089,7 +1089,7 @@ color: white;}
  .container_main > span > h2{
     margin-top: 5%;
     font-weight: bold;
-    margin-left: 20%;
+   text-align: center;
     color: #3490f2;
  }
  .sub-menu-1
@@ -1240,8 +1240,20 @@ color: black;
         }
 
         */
-    
-    
-    
+    .client_section,
+    .client_section * {
+        text-align: center;
+    }
+    .footer_section ,.footer_section  *{
+        text-align: center;
+    }
+    .container_main,.container_main *:not(.bt-gallery > a) {
+        text-align: center;
+    }
+    .editest{
+ 
+        display: flexS;
+        margin-top:  20% ;
+    }
   
 }
