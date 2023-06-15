@@ -420,13 +420,14 @@ button {
     width: 175px;
     float: left;
     padding-top: 40px;
+    
 }
 
 .read_bt a {
     width: 100%;
     float: left;
     font-size: 18px;
-    background-color: #252525;
+    background-color: #007bff;
     color: #ffffff;
     text-align: center;
     padding: 8px;
@@ -1116,7 +1117,7 @@ color: white;}
 }
 
 .sub-menu-1 ul li a:hover{
-    color: #10e2bd;
+    color: #0f6acb;
 }
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
@@ -1150,6 +1151,12 @@ color: black;
         --s: calc(50% + .61em); /* it should be 0.6em(1.2em/2) but we use a litte bigger */
         color: #fff;
      }
+     .btn
+     {
+        display: block;
+        position: relative;
+        margin-top: 700px;
+     }
 /*------------------Mobile version----------------------------- */
 @media (max-width: 767px) {
     
@@ -1157,6 +1164,8 @@ color: black;
     
    .nav-link{
     width: 120px;
+    text-align: left; /* Align the text to the left */
+
 
     /*
     padding: 0;
@@ -1198,15 +1207,40 @@ color: black;
         width: 150px;
         padding: 10px;
         border-bottom: 1px dotted #3490f2;
-        background: white;
+        background: whit;
         text-align: left;
     }
     .banner_section > .container  {
         position:relative;
         margin-top : 2px;
         
-        
+       
     }
+    .contact_us{
+        margin-left: 25%;
+    }
+    .lm{
+        margin-left: 55%;
+
+    }
+    .carousel-control-prev , .carousel-control-next
+    {
+        display: none;
+    }
+    /*
+    .learnmore_bt>a {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        border-radius: 50%;
+        background-color: #007bff;
+        }
+
+        */
+    
     
     
   
