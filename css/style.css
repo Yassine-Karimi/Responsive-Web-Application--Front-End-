@@ -882,11 +882,11 @@ font-style: oblique;
     margin-left: 40%;
     padding: 10px;
 }
-input[type=submit] {
+input[type=submit]{
     background-color: #f76d37;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 5px;
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
@@ -894,7 +894,20 @@ input[type=submit] {
   }
   input[type=submit]:hover {
   background-color: #007bff;
-  border: dashed #f76d37;  
+}
+
+input[type=reset] {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 9%;
+  }
+  input[type=reset]:hover {
+  background-color: #aeb1b3;
 }
 
 .long_text {
