@@ -45,14 +45,15 @@ if ($conn->connect_error) {
 
 // Prepare and execute the SQL statement to insert data into the "client" table
 $sql = "INSERT INTO client_com VALUES('$name', '$email', '$phone', '$ville', '$typeLocal', '$sujet', '$autre', '$message1')";
+$retour = mail("yassinkarimi.1.23@gmail.com", "Contact", "Bonjour !");
 
-if ($conn->query($sql) === TRUE)
+if ($conn->query($sql) === TRUE  and $retour)
  {
  
-    $retour = mail("yassinkarimi.1.23@gmail.com", "Contact", "Bonjour !");
-        if ($retour) {
+   
+       
             $testVariable = 'Bien Envoyer !';
-        }
+        
        
   
     echo "Data inserted successfully";
