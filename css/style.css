@@ -1307,6 +1307,7 @@ color: black;
       {
         margin-bottom: 5%;
       }
+      
     
 /*------------------Mobile version----------------------------- */
 @media (max-width: 767px) {
@@ -1430,4 +1431,7 @@ color: black;
   }
   
   
+}
+.form-group > span {
+    position: relative;
 }

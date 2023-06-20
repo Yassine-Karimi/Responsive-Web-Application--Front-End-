@@ -1,7 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
-     
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,14 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+          .succ1 > .succ2{
+             text-align: center;
+             color: rgb(15, 214, 15);
+             font-weight: bolder;
+      }
+      </style>
+    
    </head>
    <body>
     <!--header section start -->
@@ -43,7 +51,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item ">
-                     <a class="nav-link" href="/" style="text-align: left; color: #0D5BB9;">Home </a>
+                     <a class="nav-link" href="index.html" style="text-align: left; color: #0D5BB9;">Home </a>
                      
                   </li>
                   <li class="nav-item">
@@ -153,46 +161,47 @@
                <div class="col-md-6 padding_0">
                   <div class="mail_section">
                      <img src="images/contact1.png" alt="">
-                     <form action="php/form.php" method="post" enctype="multipart/form-data">
+                     <form action="form.php" method="post" enctype="multipart/form-data">
                      <div class="email_text">
                         <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Name" name="Name">
+                           <input type="text" class="email-bt" placeholder="*Name" name="Name" required>
                         </div>
                         <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);">
-                              <option value="" style="color: gray ;">Ville</option>
-                              <option value="homme">Casablanca</option>
-                              <option value="femme">Mohammedia</option>
-                              <option value="autre">Agadir</option>
-                              <option value="autre">Beni Mellal</option>
-                              <option value="autre">Berkane</option>
-                              <option value="autre">Nador</option>
-                              <option value="autre">Oujda</option>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="ville" required>
+                              
+                              <option value="" style="color: gray ;">*Ville</option>
+                              <option value="casablanca">Casablanca</option>
+                              <option value="mohammedia">Mohammedia</option>
+                              <option value="agadir">Agadir</option>
+                              <option value="beni mellal">Beni Mellal</option>
+                              <option value="berkane">Berkane</option>
+                              <option value="nador">Nador</option>
+                              <option value="oujda">Oujda</option>
 
 
                           </select>                     
                          </div>
                         <div class="form-group">
-                           <input type="" class="email-bt" placeholder="Email" name="Email">
+                           <input type="" class="email-bt" placeholder="*Email" name="Email" required>
                         </div>
                         <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Phone Numbar" name="Tel">
+                           <input type="text" class="email-bt" placeholder="*Phone Numbar" name="Tel" required>
                         </div>
                         <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);">
-                              <option value="" >Le type de local</option>
-                              <option value="homme">Particulier</option>
-                              <option value="femme">Professionnel</option>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="type" required>
+                              <option value="" >*Le type de local</option>
+                              <option value="particulier">Particulier</option>
+                              <option value="professionnel">Professionnel</option>
                           </select>                     
                          </div>
                          <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);">
-                              <option value="" >Sujet</option>
-                              <option value="homme">Studio</option>
-                              <option value="femme">Appartement</option>
-                              <option value="femme">Maison</option>
-                              <option value="femme">Villa</option>
-                              <option value="femme">Autre</option>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="Sujet" required>
+                              <option value="" >*Sujet</option>
+                              <option value="studio">Studio</option>
+                              <option value="appartement">Appartement</option>
+                              <option value="maison">Maison</option>
+                              <option value="villa">Villa</option>
+                              <option value="autre">Autre</option>
                           </select>                     
                          </div>
                          <div class="form-group">
@@ -202,12 +211,27 @@
                            <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
                         </div>
                         <div class="send_btn">
-                           
+                          
                            <input type="submit" value="Emvoyer" class="submit_btn">
                            <input type="reset" value="Reset">
+                        
+
                         </div>
                      </div>
                      </form>
+
+                     <div class="succ1">
+                   <p class="succ2"> 
+                   <?php
+                       if (isset($_GET['variable'])) 
+                       {
+                         $testVariable = $_GET['variable'];
+                         echo $testVariable;
+                         // Vous pouvez maintenant utiliser $testVariable dans votre code
+                       } 
+    ?>
+                   </p>
+                   </div>
                   </div>
                  
                </div>
