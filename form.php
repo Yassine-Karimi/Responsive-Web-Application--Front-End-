@@ -45,18 +45,32 @@ if ($conn->connect_error) {
 
 // Prepare and execute the SQL statement to insert data into the "client" table
 $sql = "INSERT INTO client_com VALUES('$name', '$email', '$phone', '$ville', '$typeLocal', '$sujet', '$autre', '$message1')";
-$retour = mail("yassinkarimi.1.23@gmail.com", "Contact", "Bonjour !");
+$to = "yassinkarimi.1.23@gmail.com";
+$subject = "Contact";
+$message = "Bonjour !\n";
+$message .= "Nom : " . $name . "\n";
+$message .= "Ville : " . $ville . "\n";
+$message .= "Email : " . $email . "\n";
+$message .= "Téléphone : " . $phone . "\n";
+$message .= "Type de local : " . $typeLocal . "\n";
+$message .= "Sujet : " . $sujet . "\n";
+$message .= "Autre : " . $autre . "\n";
+$message .= "Message : " . $message1 . "\n";
 
-if ($conn->query($sql) === TRUE  and $retour)
+// En-têtes de l'email
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+// Envoyer l'email
+$retour = mail($to, $subject, $message);
+if ($conn->query($sql) === TRUE)
  {
- 
-   
        
             $testVariable = 'Bien Envoyer !';
-        
-       
-  
+  if($retour)
+  {
     echo "Data inserted successfully";
+  }
 
     // Rediriger vers contact.php avec la variable dans l'URL
    // header("Location: contact.php?variable=" . urlencode($testVariable));
@@ -66,7 +80,6 @@ if ($conn->query($sql) === TRUE  and $retour)
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     $testVariable = 'Erreur !';
-    header("Location: contact.php?variable=" . urlencode($testVariable));
 
 
 }
