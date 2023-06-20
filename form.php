@@ -62,14 +62,16 @@ $headers = "From: $email\r\n";
 $headers .= "Reply-To: $email\r\n";
 
 // Envoyer l'email
-$retour = mail($to, $subject, $message);
+$retour = mail($to,$subject,$message,$headers);
 if ($conn->query($sql) === TRUE)
  {
        
-            $testVariable = 'Bien Envoyer !';
   if($retour)
   {
     echo "Data inserted successfully";
+    $testVariable = 'Bien Envoyer !';
+    header("Location: contact.php?variable=" . urlencode($testVariable));
+
   }
 
     // Rediriger vers contact.php avec la variable dans l'URL
@@ -80,6 +82,8 @@ if ($conn->query($sql) === TRUE)
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     $testVariable = 'Erreur !';
+    header("Location: contact.php?variable=" . urlencode($testVariable));
+
 
 
 }

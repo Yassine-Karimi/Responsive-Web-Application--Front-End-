@@ -1307,7 +1307,7 @@ color: black;
       {
         margin-bottom: 5%;
       }
-      
+   
     
 /*------------------Mobile version----------------------------- */
 @media (max-width: 767px) {
@@ -1429,7 +1429,160 @@ color: black;
     margin-left: 36%;
 
   }
+
+
+.contact_section
+{
+   position: relative;
+}
+
+.services_text1 {
+    width: 195%;
+    float: center;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+    text-align: justify;
+    font-size: small;
+    margin-left: 12%;
+    
+}
   
+.info2{
+display:none;
+}
+
+.crd{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #007bff;
+}
+.container4{
+    display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+.contact_text {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20%
+}
+.contact_text2 {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.contact_section_2 {
+    width: 80%;
+    float: left;
+}
+input[type="text"],input[type="email"],textarea
+{
+    background-color: rgb(246, 246, 246);
+}
+.mail_section {
+    width: 100%;
+    float: none;
+    height: auto;
+    border: none;
+    background-image:  none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20%;
+   position: relative;
+}
+.mail_section > img{
+    width: 40%;
+    margin-left: 25%;
+    padding: 10px;
+}
+input[type=submit]{
+    background-color: #f76d37;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    margin-right: 40%;
+    margin-top: 10%;
+    cursor: pointer;
+    border-top-left-radius: 29%;
+    width: 130px;
+  }
+  input[type=submit]:hover {
+  background-color: #007bff;
+}
+
+input[type=reset] {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    margin-right: 40%;
+    cursor: pointer;
+    border-top-left-radius: 29%;
+    width: 130px;
+  }
+  input[type=reset]:hover {
+  background-color: #aeb1b3;
+}
+
+.long_text {
+    width: 52%;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+    color: #b2afaf;
+    padding-top: 30px;
+    display: flex;
+}
+
+.email_text {
+
+    width: 100%;
+    float: none;
+}
+
+.email-bt {
+    color: #080707;
+    width: 90%;
+    height: 25px;
+    font-size: 20px;
+    padding: 20px 40px;
+    border: 0px;
+    border-radius: 30px;
+}
+
+
+.section {
+    color: #000000;
+    }
+.placeholder{
+    color: #5a5757;
+    width: 90%;
+    height: 45px;
+    font-size: 20px;
+    padding-left: 40px;
+    border: 0px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    }
+.massage-bt {
+    color: #080707;
+    width: 90%;
+    height: 90px;
+    font-size: 20px;
+    padding: 30px;
+    border: 0px;
+    border-radius: 50px;
+}
   
 }
 .form-group > span {

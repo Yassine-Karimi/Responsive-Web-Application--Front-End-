@@ -167,7 +167,7 @@
                            <input type="text" class="email-bt" placeholder="*Name" name="Name" required>
                         </div>
                         <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="ville" required>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="ville" >
                               
                               <option value="" style="color: gray ;">*Ville</option>
                               <option value="casablanca">Casablanca</option>
@@ -188,14 +188,14 @@
                            <input type="text" class="email-bt" placeholder="*Phone Numbar" name="Tel" required>
                         </div>
                         <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="type" required>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="type" >
                               <option value="" >*Le type de local</option>
                               <option value="particulier">Particulier</option>
                               <option value="professionnel">Professionnel</option>
                           </select>                     
                          </div>
                          <div class="form-group">
-                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="Sujet" required>
+                           <select id="choix" class="placeholder" onchange="changeColor(this);" name="Sujet" >
                               <option value="" >*Sujet</option>
                               <option value="studio">Studio</option>
                               <option value="appartement">Appartement</option>
@@ -303,5 +303,6 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>    
       <script src="js/functions.forms.js"></script> 
+      
    </body>
 </html>
