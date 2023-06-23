@@ -30,6 +30,8 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
       <style>
           .succ1 > .succ2{
              text-align: center;
@@ -37,7 +39,7 @@
              font-weight: bolder;
       }
       </style>
-    
+   
    </head>
    <body>
     <!--header section start -->
@@ -210,16 +212,21 @@
                         <div class="form-group">
                            <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
                         </div>
-                        <div class="send_btn">
-                          
-                           <input type="submit" value="Emvoyer" class="submit_btn">
-                           <input type="reset" value="Reset">
-                        
 
+                        <div id="recaptcha-container"></div>
+  
+                         <input type="hidden" id="recaptcha-response" name="recaptcha-response">
+                        <div class="g-recaptcha" data-sitekey="6Lc4fMImAAAAAM1lTYgw9NhAO95L_v5c8DwKbYLr"></div>
+                         <div class="send_btn">
+                           
+                           <input type="submit" value="Envoyer" id="submitButton" class="submit_btn">
+                           <input type="reset" value="Reset">
+               
                         </div>
                      </div>
                      </form>
-
+                  
+                  
                      <div class="succ1">
                    <p class="succ2"> 
                    <?php

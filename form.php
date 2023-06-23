@@ -1,7 +1,26 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les valeurs soumises depuis le formulaire
+    if(isset($_POST['g-recaptcha-response']))
+    {
+        $recaptcha=$_POST['g-recaptcha-response'];
+        
+        if(!$recaptcha)
+        {
+            echo '<script>alert("Please go back and check recaptcha box")</script>';
+            header("Refresh: 1; URL=contact.php");
+
+            exit;  
+        }
+        else
+        {
+            $secret="6Lc4fMImAAAAAEOGGVwWzqjiWPYcEdfURwtOME8n"; 
+            $url="https://www.google.com/recaptcha/api/siteverify?secret=".$secret."&response=".$recaptcha;
+            $response=file_get_contents($url);
+            $responseKeys=json_decode($response,true);
+            if( $responseKeys['success'])
+            {
+                // Récupérer les valeurs soumises depuis le formulaire
     $name = $_POST["Name"];
     $ville = $_POST["ville"];
     $email = $_POST["Email"];
@@ -22,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Sujet : " . $sujet . "<br>";
     echo "Autre : " . $autre . "<br>";
     echo "Message : " . $message1 . "<br>";
-}
+
 
 
 // Database configuration
@@ -70,6 +89,8 @@ if ($conn->query($sql) === TRUE)
   {
     echo "Data inserted successfully";
     $testVariable = 'Bien Envoyer !';
+    $conn->close();
+
     header("Location: contact.php?variable=" . urlencode($testVariable));
 
   }
@@ -82,13 +103,19 @@ if ($conn->query($sql) === TRUE)
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     $testVariable = 'Erreur !';
+    $conn->close();
+
     header("Location: contact.php?variable=" . urlencode($testVariable));
 
+ 
+            }
+        }
 
-
+    }
+   
+}
 }
 
 // Close the database connection
-$conn->close();
 
 ?>
