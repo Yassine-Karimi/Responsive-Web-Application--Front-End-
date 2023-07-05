@@ -64,29 +64,47 @@
                     
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="services.html"  style="color: #0D5BB9;text-align: left;">Services <i class="bx bx-chevron-down"></i></a>
-                     <div class="sub-menu-1">
-                        <ul>
-                          <li><a href="services.html">Service 1</a></li>
+                        <a class="nav-link" href="services.html"  style="color: #0D5BB9;text-align: left;">Services <i class="bx bx-chevron-down"></i></a>
+                        <div class="sub-menu-1" style="z-index: 7;" >
+                           <ul>
+                             <div class="sub-menu-1">
+                              <ul>
+                                <li><a href="#">CONSEIL ET STRATEGIE</a></li>
+                                <li><a href="#">CONSEIL FISCAL</a></li>
+                                <li><a href="#">CREATION D'ENTREPRISE</a></li>
+                                <li><a href="#">DOMICILIATION ENTREPRISES</a></li>
+                                <li><a href="#">FISCALITE ET COMPTABILITE</a></li>
+                                <li><a href="#">FORMATION COMPTABILITE FISCALITE</a></li>
+                                <li><a href="#">JURIDIQUES DES ENTREPRISES</a></li>
+                                <li><a href="#">LA GESTION DE LA PAIE</a></li>
+                              
+  
+                              </ul>
+   
+   
+                           </div>
 
-                        </ul>
+                           </ul>
 
 
-                     </div>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#"  style="color: #0D5BB9;text-align: left;">Shop </a>
-                   
-                  </li>
+                        </div>
+                     </li>
+                  
                   <li class="nav-item">
                      <a class="nav-link" href="#"  style="color: #0D5BB9;text-align: left;">Blogs </a>
                     
                   </li>
                   <li class="nav-item active">
-                     <a class="nav-link" href="contact.html"  style=" text-align: left;">Contact Us</a>
+                     <a class="nav-link" href="#"  style=" text-align: left;">Contact Us</a>
                   </li>
                 
                </ul>
+               <div class="btnDev">
+                        <a class="nav-link" href="#"  style="text-align: left;">DEMANDEZ DEVISE</a>
+                      
+                     </div>
+                  
+            </div>
                   
             </div>
          </nav>
