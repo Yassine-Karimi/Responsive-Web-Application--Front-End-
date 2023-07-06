@@ -29,6 +29,42 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style>
+        .quote-alert {
+   background-color: #f5f5f5;
+   padding: 20px;
+   text-align: center;
+}
+
+.quote-alert h2 {
+   font-size: 24px;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.quote-alert p {
+   font-size: 16px;
+   color: #777;
+   margin-bottom: 20px;
+}
+
+.quote-alert button {
+   background-color: #0D5BB9;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.quote-alert button:hover {
+   background-color: #06386e;
+}
+
+      </style>
+    
    </head>
    <body>
     <!--header section start -->
@@ -93,8 +129,8 @@
                      
                  
                </ul>
-               <div class="btnDev">
-                        <a class="nav-link" href="#"  style="text-align: left;">DEMANDEZ DEVISE</a>
+               <div class="">
+                <button class="btnOpen btnDev">Register</button>
                       
                      </div>
                   
@@ -102,30 +138,9 @@
          </nav>
       </div>
    </div>
-   
       <!--header section end -->
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
       <!-- about section start -->
-      
       <div class="about_section layout_padding">
-         
-        
-
-
          <div class="container">
             <div class="row">
                <div class="col-md-6">
@@ -143,7 +158,6 @@
          </div>
       </div>
       <!-- about section end -->
-
       <!-- footer section start -->
       <div class="footer_section layout_padding margin_top90">
          <div class="container">
@@ -190,15 +204,54 @@
             </div>
          </div>
       </div>
+      <div class="quote-alert">
+        <h2>DEMANDEZ DEVISE</h2>
+        <p>Get a free quote for our services</p>
+        <button onclick="openQuoteForm()">Request Quote</button>
+     </div>
+     
       <!-- footer section end -->
 
 
+      <section class="box">
+        <div class="close">&times;</div>
+        <div class="circle">
+           <span class="register-head"></span>
+          <span class="register-body"></span>
+  
+          <!--Add these two lines below to your current code -->
+        <span class="slant-left"></span>
+        <span class="slant-right"></span>
+        <!-- end -->
+        </div>
 
+        <div class="registration-box">
+            <div>
+                <input type="email" class="email" required="required">
+                <label for="email">Email</label>
+             </div>
+    
+             <div>
+                <input type="text" class="first_name" required="required">
+                <label for="first_name">First Name</label>
+             </div>
+             <div>
+                <input type="text" class="last_name" required="required">
+                <label for="last_name">Last Name</label>
+             </div>
+    <button class="btnSubmit">Submit</button>
+            </div>
 
-
-
-
-
+             <!-- Add these lines below to your current code -->
+            <div class="confirmation-box" style="display: none;">
+               <h1>Registration Confirmed</h1>
+                <div class="body-text">                  
+               </div>
+              <p> Thank You. </p>               
+               <button class="btnClose">Close</button>
+               </div>
+               <!-- end -->
+    </section>
 
       <!-- copyright section start -->
       <div class="copyright_section">
@@ -217,6 +270,5 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script> 
       <script src="js/main.js"></script>
-    
    </body>
 </html>

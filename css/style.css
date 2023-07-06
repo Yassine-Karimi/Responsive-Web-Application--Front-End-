@@ -1157,6 +1157,9 @@ background-color: #007bff;
 .about_img
 {
     margin-left: 20%;
+    border: solid rgb(34, 125, 205);
+
+
 }
 .circle {
     border: dashed  #007bff ;
@@ -1284,13 +1287,13 @@ color: black;
      .img-service{
         border:#007bff groove;
         float: left;
-        width: 55%;
+        width: 45%;
         margin-right: 5%;
       }
       .img-service1{
         border:#007bff groove;
         float: right;
-        width: 55%;
+        width: 45%;
         margin-left: 5%;
       }
 
@@ -1320,10 +1323,24 @@ color: black;
         background-color: #1068a7;
     }
 
-/*------------------Mobile version----------------------------- */
+/*-------------------------------------Mobile version---------------------------------- */
 @media (max-width: 767px) {
-    
+    .about_img
+{
+    margin-left: 0%;
+    border: solid rgb(34, 125, 205);
+}
+    .btnDev{
+        z-index: 7;
+        background-color: #1068a7;
+        width: 25%;
+    }
     .img-service{
+        border:#007bff groove;
+        float: top;
+        width: 100%;
+      }
+      .img-service1{
         border:#007bff groove;
         float: top;
         width: 100%;
@@ -1598,3 +1615,7 @@ input[type=reset] {
 .form-group > span {
     position: relative;
 }
+ /*
+ ------------------------PopUp Form---------------------------------
+
+ */
