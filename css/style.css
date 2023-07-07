@@ -1199,6 +1199,9 @@ color: white;}
  }
  .bt-gallery{
     margin-top: 100px;
+    text-align: center;
+    
+
  }
  .bt-gallery > a{
     color: #007bff;
@@ -1322,6 +1325,24 @@ color: black;
         z-index: 7;
         background-color: #1068a7;
     }
+    .bt-gallery
+  {
+    margin-bottom: 10%;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px #007bff;
+    width: 105px;
+    margin-left: 36%;
+
+  }
+  .bt-gallery:hover
+  {
+  
+    box-shadow: 0px 0px 2px 2px #f76e2f;
+   
+
+  }
+
 
 /*-------------------------------------Mobile version---------------------------------- */
 @media (max-width: 767px) {
